@@ -1,0 +1,80 @@
+Started GET "/" for 10.0.2.2 at 2020-05-03 10:28:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (15.1ms)
+Completed 200 OK in 77ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20200503103834)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200503103834_devise_create_users.rb:5
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200503103834_devise_create_users.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20200503103834_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200503103834"]]
+  ↳ bin/rails:9
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (8.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-03 10:49:18.433013"], ["updated_at", "2020-05-03 10:49:18.433013"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 10:52:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (4.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (381.6ms)
+Completed 200 OK in 3612ms (Views: 3502.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 10:53:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (4.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 389ms (Views: 385.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-05-03 10:53:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (3.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (3.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 409ms (Views: 405.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-05-03 11:06:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (131.7ms)
+Completed 200 OK in 1999ms (Views: 1881.2ms | ActiveRecord: 17.4ms)
+
+
