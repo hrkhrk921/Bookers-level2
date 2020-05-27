@@ -20,13 +20,17 @@
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
               <li>
-                <%= link_to '投稿フォーム', new_post_image_path %>
+                <%= link_to ' Home' %>
                   
                 </li>
                 <li>
                   <!-- ↓以下のコードは、5章で正しいroutingに書き直します。 -->
-                  <%= link_to 'マイページ', "#" %>
+                  <%= link_to ' Users', "#" %>
                   </li>
+                  <li>
+                <%= link_to ' Books', new_user_session_path %>
+                  
+                </li>
                   <li>
                     <%= link_to "logout", destroy_user_session_path, method: :delete %>
                     </li>
@@ -43,7 +47,9 @@
                 <a class="glyphicon glyphicon-edit sign_up" href="/users/sign_up"> sign up</a>
                 </li>
                 <li>
+                  <li>
                   <a class="glyphicon glyphicon-log-in sign_in" href="/users/sign_in"> login</a>
+                  </li>
                   </li>
               <% end %>
             </ul>
